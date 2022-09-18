@@ -1,0 +1,8 @@
+{
+  "kind": "identitytoolkit#SignupNewUserResponse",
+  "idToken": "eyJhbGciOiJSU...",
+  "email": "aaa@gmail.com",
+  "refreshToken": "AOEOulYl0Tl...",
+  "expiresIn": "3600",
+  "localId": "qh4rwiv..."
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fragment_sign_in_check_box_text_remember">Remember me</string>
+    <string name="fragment_sign_in_text_forget_password">Forget password</string>
+    <string name="fragment_sign_in_text_sign_in">Sign in</string>
+    <string name="fragment_sign_in_input_password_hint">Password</string>
+    <string name="fragment_sign_in_input_email_hint">Email Address</string>
+    <string name="hello_again_you_ve_been_missed">Hello again, you\'ve been missed!</string>
+    <string name="hi_welcome_back">Hi, Welcome Back!</string>
+    <string name="fragment_sign_in_text_don_t_have_account">Don\'t have account ?</string>
+    <string name="fragment_sign_in_text_sign_up">Signup</string>
+</resources>

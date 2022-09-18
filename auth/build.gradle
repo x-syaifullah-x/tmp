@@ -1,0 +1,9 @@
+apply from: "$rootDir/common_android_library.gradle"
+
+apply plugin: "kotlin-kapt"
+
+dependencies {
+
+    api project(":auth:auth-data")
+    api project(":auth:auth-presentation")
+}

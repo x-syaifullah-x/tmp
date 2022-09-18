@@ -1,0 +1,89 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "id.xxx.module",
+    "module": "io",
+    "version": "0.0.001",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "io-0.0.001.jar",
+          "url": "io-0.0.001.jar",
+          "size": 19764,
+          "sha512": "889bb37c872aa944a85d4d3982945f22d2fec3a96a52987e90c65d94ffc822c997cc5d3d2340085a4813f04beaf48c4b4871876bc1c638548dbd773514442f4f",
+          "sha256": "8e59d3cbac76194ee7448b2c8e99190773821ad00754aec63edb737e4bbdf423",
+          "sha1": "658910957071beb712971b71ca4ab949f9334251",
+          "md5": "ea7c1d9c397c462d31543fd36c358631"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.6.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "io-0.0.001.jar",
+          "url": "io-0.0.001.jar",
+          "size": 19764,
+          "sha512": "889bb37c872aa944a85d4d3982945f22d2fec3a96a52987e90c65d94ffc822c997cc5d3d2340085a4813f04beaf48c4b4871876bc1c638548dbd773514442f4f",
+          "sha256": "8e59d3cbac76194ee7448b2c8e99190773821ad00754aec63edb737e4bbdf423",
+          "sha1": "658910957071beb712971b71ca4ab949f9334251",
+          "md5": "ea7c1d9c397c462d31543fd36c358631"
+        }
+      ]
+    }
+  ]
+}

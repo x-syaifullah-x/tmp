@@ -1,0 +1,10 @@
+apply plugin: "com.android.library"
+
+apply from: "$rootDir/common_android.gradle"
+
+android {
+
+    String packageName = "id.xxx.module.${projectDir.name.replace("-", ".")}"
+    namespace packageName
+    testNamespace "${packageName}.test"
+}

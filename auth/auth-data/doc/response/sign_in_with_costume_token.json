@@ -1,0 +1,7 @@
+{
+  "kind": "identitytoolkit#VerifyCustomTokenResponse",
+  "idToken": "eyJhbGciOi...",
+  "refreshToken": "AOEOulbO...",
+  "expiresIn": "3600",
+  "isNewUser": false
+}

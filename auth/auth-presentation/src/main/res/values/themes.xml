@@ -1,0 +1,6 @@
+<resources>
+
+    <style name="Theme.Application" parent="Theme.MaterialComponents.Light">
+        <!---->
+    </style>
+</resources>

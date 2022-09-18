@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <activity
+            android:name="id.xxx.module.ui.activity.ActionActivity"
+            android:exported="true"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/action_activity_host"
+                    android:path="@string/action_activity_path"
+                    android:scheme="@string/action_activity_scheme" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

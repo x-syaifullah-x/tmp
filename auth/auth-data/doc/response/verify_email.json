@@ -1,0 +1,15 @@
+{
+  "kind": "identitytoolkit#SetAccountInfoResponse",
+  "localId": "8mErk...",
+  "email": "roottingandroid@gmail.com",
+  "providerUserInfo": [
+    {
+      "providerId": "password",
+      "federatedId": "roottingandroid@gmail.com",
+      "email": "roottingandroid@gmail.com",
+      "rawId": "roottingandroid@gmail.com"
+    }
+  ],
+  "passwordHash": "UkVEQUNURUQ=",
+  "emailVerified": true
+}

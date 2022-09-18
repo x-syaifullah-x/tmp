@@ -1,0 +1,11 @@
+rootProject.name = "Firebase Auth"
+
+include(
+        ":app",
+
+        ":auth",
+        ":auth:auth-action",
+        ":auth:auth-data",
+        ":auth:auth-domain",
+        ":auth:auth-presentation",
+)

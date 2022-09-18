@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_nested_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root_constrain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_hi_welcome_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_18sdp"
+            android:text="@string/hi_welcome_back"
+            android:textSize="@dimen/_25ssp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_hi_welcome_back_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_again_you_ve_been_missed"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toStartOf="@id/tv_hi_welcome_back"
+            app:layout_constraintTop_toBottomOf="@id/tv_hi_welcome_back" />
+
+        <Spinner
+            android:id="@+id/spinner_code_area"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:background="@drawable/blue_outline"
+            android:popupBackground="@drawable/blue_outline_with_background"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_hi_welcome_back_sub"
+            app:layout_constraintWidth_percent=".5"
+            tools:listitem="@layout/country_code_item" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_phone"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner_code_area"
+            app:layout_constraintWidth_percent=".8">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Phone Number"
+                android:imeOptions="flagNoFullscreen"
+                android:importantForAutofill="no"
+                android:inputType="textNoSuggestions|phone"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_get_otp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="get otp"
+            app:layout_constraintEnd_toEndOf="@id/text_input_layout_phone"
+            app:layout_constraintStart_toStartOf="@id/text_input_layout_phone"
+            app:layout_constraintTop_toBottomOf="@id/text_input_layout_phone"
+            app:layout_constraintWidth_percent=".6" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_get_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="btn_get_otp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_otp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            app:layout_constraintEnd_toEndOf="@+id/text_input_layout_phone"
+            app:layout_constraintStart_toStartOf="@id/text_input_layout_phone"
+            app:layout_constraintTop_toBottomOf="@id/barrier_get_otp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="OTP"
+                android:imeOptions="flagNoFullscreen"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cb_remember_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:checked="true"
+            android:text="@string/fragment_sign_in_check_box_text_remember"
+            app:buttonTint="?attr/colorPrimary"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/text_input_layout_phone"
+            app:layout_constraintTop_toBottomOf="@id/text_input_layout_otp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_confirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="Confirm"
+            app:layout_constraintEnd_toEndOf="@id/text_input_layout_otp"
+            app:layout_constraintStart_toStartOf="@id/cb_remember_me"
+            app:layout_constraintTop_toBottomOf="@id/cb_remember_me"
+            app:layout_constraintWidth_percent=".6" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_btn_sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="barrier_get_otp, btn_confirm" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_use_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="use email ?"
+            android:textColor="?attr/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="@+id/btn_get_otp"
+            app:layout_constraintStart_toStartOf="@+id/btn_get_otp"
+            app:layout_constraintTop_toBottomOf="@+id/barrier_btn_sign_in" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/container_recaptcha"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf="@id/barrier_pb"
+            app:layout_constraintEnd_toEndOf="@id/tv_use_email"
+            app:layout_constraintStart_toStartOf="@id/tv_use_email"
+            app:layout_constraintTop_toBottomOf="@id/tv_use_email"
+            app:layout_constraintWidth_percent=".8"
+            tools:layout="@layout/fragment_recaptcha" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="barrier_get_otp, container_recaptcha" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:indicatorColor="?attr/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier_pb"
+            tools:visibility="visible" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="text_input_layout_otp, cb_remember_me, btn_confirm" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

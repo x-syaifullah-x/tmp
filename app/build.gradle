@@ -1,0 +1,113 @@
+apply plugin: "com.android.application"
+
+apply from: "$rootDir/common_android.gradle"
+
+android {
+
+    String packageName = "id.xxx.started_project"
+    namespace packageName
+    testNamespace "${packageName}.test"
+
+    defaultConfig {
+        applicationId "id.xxx.started_project"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        resConfigs "en", "in-rID"
+    }
+
+//    signingConfigs {
+//        def home_dir = System.getProperty("user.home")
+//        def store_file = file("$home_dir/.android/debug.keystore")
+//        def store_password = "android"
+//        def key_alias = "androiddebugkey"
+//        def key_password = "android"
+//
+//        release {
+//            storeFile store_file
+//            storePassword store_password
+//            keyAlias key_alias
+//            keyPassword key_password
+//        }
+//    }
+
+    signingConfigs {
+        debug {
+            def store_file_release = file("$rootDir/key_store/release/im.launcher.net.jks")
+            storeFile store_file_release
+            storePassword "im.launcher.net"
+            keyAlias "im.launcher.net"
+            keyPassword "im.launcher.net"
+        }
+
+        release {
+            def store_file_release = file("$rootDir/key_store/release/im.launcher.net.jks")
+            storeFile store_file_release
+            storePassword "im.launcher.net"
+            keyAlias "im.launcher.net"
+            keyPassword "im.launcher.net"
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+        }
+
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+            debuggable false
+            jniDebuggable false
+            signingConfig signingConfigs.release
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+//    packagingOptions {
+//        exclude "META-INF/**"
+//        exclude "okhttp3/**"
+//        exclude "kotlin/**"
+//        exclude "org/**"
+//        exclude "**.properties"
+//        exclude "**.bin"
+//        exclude "kotlin-tooling-metadata.json"
+//    }
+
+//    sourceSets {
+//        androidTest {
+//        }
+//        debug {
+//        }
+//        main {
+//            java.srcDirs = [
+//                    "src/main/java"
+//            ]
+//            res.srcDirs = [
+//                    "$rootDir/app/src/main/res",
+//            ]
+//            java.srcDirs = [
+//                    "$rootDir/app/src/main"
+//            ]
+//            manifest.srcFile 'AndroidManifest.xml'
+//            proto {
+//                srcDir 'proto'
+//            }
+//    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
+
+    implementation project(":auth")
+
+    implementation "androidx.test.espresso:espresso-idling-resource:$vAndroidxEspresso"
+
+//    implementation "com.google.android.material:material:$vMaterial"
+
+//    debugImplementation "com.squareup.leakcanary:leakcanary-android:$vLeakcanaryAndroid"
+}

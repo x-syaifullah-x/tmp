@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fragment_sign_in_check_box_text_remember">Ingat saya</string>
+    <string name="fragment_sign_in_text_forget_password">Lupa sandi</string>
+    <string name="fragment_sign_in_text_sign_in">Masuk</string>
+    <string name="fragment_sign_in_input_password_hint">Sandi</string>
+    <string name="fragment_sign_in_input_email_hint">Alamat Email</string>
+    <string name="hello_again_you_ve_been_missed">Halo lagi, Anda telah dirindukan!</string>
+    <string name="hi_welcome_back">Hai, Selamat Datang Kembali!</string>
+    <string name="fragment_sign_in_text_don_t_have_account">Tidak mempunyai akun ?</string>
+    <string name="fragment_sign_in_text_sign_up">Daftar</string>
+</resources>

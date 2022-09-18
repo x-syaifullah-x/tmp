@@ -1,0 +1,11 @@
+apply from: "$rootDir/common_android_library.gradle"
+
+dependencies {
+
+    api "id.xxx.module:common-model:$vModule"
+
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$vKotlinCoroutines"
+
+    api "io.insert-koin:koin-core:$vKoin"
+    testImplementation "io.insert-koin:koin-test:$vKoin"
+}

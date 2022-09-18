@@ -1,0 +1,102 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "id.xxx.module",
+    "module": "common-android",
+    "version": "0.0.001",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.appcompat",
+          "module": "appcompat",
+          "version": {
+            "requires": "1.5.1"
+          }
+        },
+        {
+          "group": "androidx.databinding",
+          "module": "viewbinding",
+          "version": {
+            "requires": "7.3.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "common-android-0.0.001.aar",
+          "url": "common-android-0.0.001.aar",
+          "size": 45094,
+          "sha512": "b47cd5f464608b03e7a7d45b229535b3cfe1a384d8e160f9659cc98b05ea8af642515cf71575edff368ac493ae26cb819bfb39af497ce03a672136a0de9b1b94",
+          "sha256": "853974ec32f51d809d063385bc3d4580f6dc2315453d089b8803db0e9c1e2b2d",
+          "sha1": "06b333c228d3b82b4530069aa8bcfce733d849df",
+          "md5": "b7dc66584f3739c274b735c6d2c7073f"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.appcompat",
+          "module": "appcompat",
+          "version": {
+            "requires": "1.5.1"
+          }
+        },
+        {
+          "group": "androidx.databinding",
+          "module": "viewbinding",
+          "version": {
+            "requires": "7.3.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "common-android-0.0.001.aar",
+          "url": "common-android-0.0.001.aar",
+          "size": 45094,
+          "sha512": "b47cd5f464608b03e7a7d45b229535b3cfe1a384d8e160f9659cc98b05ea8af642515cf71575edff368ac493ae26cb819bfb39af497ce03a672136a0de9b1b94",
+          "sha256": "853974ec32f51d809d063385bc3d4580f6dc2315453d089b8803db0e9c1e2b2d",
+          "sha1": "06b333c228d3b82b4530069aa8bcfce733d849df",
+          "md5": "b7dc66584f3739c274b735c6d2c7073f"
+        }
+      ]
+    }
+  ]
+}

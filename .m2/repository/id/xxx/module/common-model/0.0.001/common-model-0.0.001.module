@@ -1,0 +1,82 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "id.xxx.module",
+    "module": "common-model",
+    "version": "0.0.001",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "common-model-0.0.001.jar",
+          "url": "common-model-0.0.001.jar",
+          "size": 14354,
+          "sha512": "0689fdea3b0a4738193bfdad7330c726b5252a6622ed54c710c7735b9db4c04ab804b5a2da9be4f027f49e3e61089d140862ad15bbab903bab89b343a074c601",
+          "sha256": "a9f09b497b3216347648547aff58f995d0b2f10d70f45e16054bd0e94f780573",
+          "sha1": "31acbe4347caa21e5f8aa4a0081510faa79b00e9",
+          "md5": "ae76ad60c6f1c8daefadf707104f84e5"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "common-model-0.0.001.jar",
+          "url": "common-model-0.0.001.jar",
+          "size": 14354,
+          "sha512": "0689fdea3b0a4738193bfdad7330c726b5252a6622ed54c710c7735b9db4c04ab804b5a2da9be4f027f49e3e61089d140862ad15bbab903bab89b343a074c601",
+          "sha256": "a9f09b497b3216347648547aff58f995d0b2f10d70f45e16054bd0e94f780573",
+          "sha1": "31acbe4347caa21e5f8aa4a0081510faa79b00e9",
+          "md5": "ae76ad60c6f1c8daefadf707104f84e5"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+apply from: "$rootDir/common_android_library.gradle"
+
+apply plugin: "kotlin-kapt"
+
+dependencies {
+
+    api "id.xxx.module:io:$vModule"
+
+    api project(":auth:auth-domain")
+
+    api "com.squareup.okhttp3:okhttp:$vOkHttp"
+
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$vKotlinCoroutines"
+}

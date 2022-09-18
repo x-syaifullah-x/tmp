@@ -1,0 +1,25 @@
+apply from: "$rootDir/common_android_library.gradle"
+
+android {
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    api project(":auth:auth-action")
+    api project(":auth:auth-domain")
+
+    api "androidx.lifecycle:lifecycle-livedata-ktx:$vAndroidxLifecycle"
+
+    api "com.google.android.material:material:$vMaterial"
+
+    api "com.intuit.sdp:sdp-android:$vSdpAndroid"
+    api "com.intuit.ssp:ssp-android:$vSdpAndroid"
+
+    api "id.xxx.module:annotation:$vModule"
+    api "id.xxx.module:common-android:$vModule"
+
+    api "io.insert-koin:koin-android:$vKoin"
+}
